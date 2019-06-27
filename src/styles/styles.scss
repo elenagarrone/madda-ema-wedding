@@ -1,9 +1,6 @@
 @import 'reset';
-@import 'colors';
+@import 'settings';
 @import 'base';
-@import 'helpers/functions';
-@import 'variables/grid-variables';
-@import 'helpers/mixins';
 
 // Grid system import
 @import 'grid/bootstrap-grid-3.3.7/bootstrap-grid-3.3.7.scss';

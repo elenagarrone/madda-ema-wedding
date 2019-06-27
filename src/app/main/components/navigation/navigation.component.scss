@@ -1,0 +1,29 @@
+@import '../../../../styles/settings';
+
+$opacity-white: rgba(255, 255, 255, 0.5);
+
+:host {
+  background-color: white;
+}
+
+.header {
+  background-color: $opacity-white;
+  border-bottom: 1px solid $border-color;
+}
+
+nav {
+  @include clearfix;
+}
+
+.list {
+  float: right;
+}
+
+.list-item {
+  display: inline-block;
+}
+
+.list-item-link {
+  display: inline-block;
+  padding: component-space(5);
+}
