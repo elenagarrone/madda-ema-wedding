@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class NavigationComponent {
   links = [
-    { text: "Matrimonio" },
-    { text: "Lista viaggio" }
+    { text: 'Matrimonio' },
+    { text: 'Lista viaggio' }
   ]
 }

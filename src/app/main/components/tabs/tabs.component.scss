@@ -1,0 +1,28 @@
+@import '../../../../styles/settings';
+
+.img {
+  width: 100%;
+}
+
+.tab-list {
+  margin-top: component-space(8);
+}
+
+.tab-list-item {
+  display: inline-block;
+  padding: component-space(3) component-space(4);
+  text-align: center;
+}
+
+.tab-list-item-link {
+  display: inline-block;
+  padding: component-space(1);
+  text-decoration: none;
+  border-bottom: 4px solid transparent;
+  transition: all 0.5s ease-in-out;
+
+  &:hover {
+    color: $secondary-color;
+    border-bottom-color: $secondary-color;
+  }
+}
