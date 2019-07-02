@@ -16,8 +16,9 @@ import { NavigationComponent } from './components/navigation/navigation.componen
 import { BannerComponent } from './components/banner/banner.component';
 import { MatrimonioComponent } from './containers/matrimonio/matrimonio.component';
 import { TabsComponent } from './components/tabs/tabs.component';
+import { ListaViaggioComponent } from './containers/lista-viaggio/lista-viaggio.component';
 
-const components = [ MainComponent, NavigationComponent, BannerComponent, MatrimonioComponent, TabsComponent ]
+const components = [ MainComponent, NavigationComponent, BannerComponent, MatrimonioComponent, TabsComponent, ListaViaggioComponent ]
 
 @NgModule({
   declarations: [ ...components ],
