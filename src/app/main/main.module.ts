@@ -8,7 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule, MatTabsModule } from '@angular/material';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faMapMarkedAlt, faMapMarkerAlt, faClock } from '@fortawesome/free-solid-svg-icons';
+import { faMapMarkedAlt, faMapMarkerAlt, faClock, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 
 import { MainComponent } from './main.component';
 import { routes } from './main.routes';
@@ -34,6 +34,6 @@ const components = [ MainComponent, NavigationComponent, BannerComponent, Matrim
 })
 export class MainModule {
   constructor() {
-    library.add(faMapMarkedAlt, faMapMarkerAlt, faClock)
+    library.add(faMapMarkedAlt, faMapMarkerAlt, faClock, faInfoCircle)
   }
 }
