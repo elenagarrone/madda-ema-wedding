@@ -17,6 +17,15 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h5 {
   font-family: 'Dancing Script', cursive;
 }
 
+h1 {
+  @include fontsize(38);
+  color: $white;
+
+  @include breakpoint(sm) {
+    @include fontsize(60);
+  }
+}
+
 h2, .h2 {
   @include fontsize(42);
   color: $primary-color;
@@ -47,6 +56,7 @@ p {
 
     &:hover {
       text-decoration: underline;
+      opacity: 0.9;
     }
   }
 

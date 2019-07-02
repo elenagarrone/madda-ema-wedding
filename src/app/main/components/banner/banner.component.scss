@@ -1,8 +1,40 @@
+@import '../../../../styles/settings';
+
 .banner {
-  background: url(../../../../assets/images/banner-img.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+  background-image: url(../../../../assets/images/banner-img.jpg), linear-gradient(to bottom right, #002f4b1c, #dc42251f);;
+  background-repeat: no-repeat;
   background-size: cover;
   height: 400px;
+  text-align: center;
+  color: $white;
+
+  .counter {
+    margin-top: component-space(21);
+    background-color: #67696670;
+    display: inline-block;
+    padding: component-space(6);
+    border-radius: 6px;
+  }
+
+  .time {
+    @include fontsize(24);
+    margin-right: component-space(9);
+    display: inline-block;
+
+    @include breakpoint(sm) {
+      @include fontsize(50);
+    }
+
+    span {
+      @include fontsize(16);
+
+      @include breakpoint(sm) {
+        @include fontsize(20);
+      }
+    }
+  }
+
+  .time, .location {
+    font-weight: 400;
+  }
 }

@@ -1,3 +1,10 @@
 <div class="banner">
-  
+  <div class="counter">
+    <h1>Emanuele e Maddalena</h1>
+    <p class="location">Parrocchia di San Giovanni Battista</p>
+    <p class="time" *ngIf="timeLeft.days">{{timeLeft.days}} <span>giorni</span></p>
+    <p class="time" *ngIf="timeLeft.hours">{{timeLeft.hours}} <span>ore</span></p>
+    <p class="time" *ngIf="timeLeft.minutes">{{timeLeft.minutes}} <span>minuti</span></p>
+    <p class="time" *ngIf="timeLeft.seconds">{{timeLeft.seconds}} <span>secondi</span></p>
+  </div>
 </div>
