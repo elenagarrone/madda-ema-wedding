@@ -7,7 +7,13 @@ import { Component } from '@angular/core';
 })
 export class NavigationComponent {
   links = [
-    { text: 'Matrimonio' },
-    { text: 'Lista viaggio' }
+    {
+      text: 'Matrimonio',
+      href: '#matrimonio-section'
+    },
+    {
+      text: 'Lista viaggio',
+      href: '#lista-viaggio-section'
+    }
   ]
 }

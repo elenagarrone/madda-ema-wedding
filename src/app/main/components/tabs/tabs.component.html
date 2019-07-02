@@ -1,27 +1,21 @@
-<div class="tabs">
-  <ul class="tab-list">
-    <li class="tab-list-item" *ngFor="let item of tabs">
-      <a
-        href="#{{ item.text | lowercase }}-panel"
-        class="tab-list-item-link"
-        (click)="activatePanel($event.target)">
-        <h3>{{ item.text }}</h3>
-      </a>
-    </li>
-  </ul>
-  <div class="panel-container" *ngFor="let item of tabs">
-    <div class="panel row" id="{{ item.text | lowercase }}-panel">
-      <div class="col-sm-offset-3 col-sm-3">
-        <img class="img" src="{{ item.panel.imgSrc }}" alt="" />
+<mat-tab-group class="tabs" mat-align-tabs="center" [disableRipple]="true" animationDuration="0ms">
+  <ng-container *ngFor="let item of tabs; index as i">
+    <mat-tab [label]="item.text">
+      <div class="row">
+        <div class="col-sm-offset-2 col-sm-4">
+          <img src="{{ item.panel.imgSrc }}" alt="" />
+        </div>
+        <div class="col-sm-6">
+          <div class="tab-info-right">
+            <h3 class="title">{{ item.panel.content.heading }}</h3>
+            <p><fa-icon icon="map-marker-alt"></fa-icon>{{ item.panel.content.location }}</p>
+            <p><fa-icon icon="clock"></fa-icon>{{ item.panel.content.time }}</p>
+            <a class="btn btn-secondary" href="{{ item.panel.content.mapBtn.href }}" target="_blank">
+              <fa-icon icon="map-marked-alt"></fa-icon>{{ item.panel.content.mapBtn.text }}
+            </a>
+          </div>
+        </div>
       </div>
-      <div class="col-sm-3">
-        <h4>{{ item.panel.content.heading }}</h4>
-        <p>{{ item.panel.content.location }}</p>
-        <p>{{ item.panel.content.time }}</p>
-        <a href="{{ item.panel.content.mapBtn.href }}">
-          {{ item.panel.content.mapBtn.text }}
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
+    </mat-tab>
+  </ng-container>
+</mat-tab-group>

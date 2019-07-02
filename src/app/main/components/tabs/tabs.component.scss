@@ -1,28 +1,62 @@
 @import '../../../../styles/settings';
 
-.img {
+img {
   width: 100%;
 }
 
-.tab-list {
-  margin-top: component-space(8);
-}
-
-.tab-list-item {
-  display: inline-block;
-  padding: component-space(3) component-space(4);
-  text-align: center;
-}
-
-.tab-list-item-link {
-  display: inline-block;
-  padding: component-space(1);
-  text-decoration: none;
-  border-bottom: 4px solid transparent;
-  transition: all 0.5s ease-in-out;
-
-  &:hover {
-    color: $secondary-color;
-    border-bottom-color: $secondary-color;
+.tabs {
+  &.mat-tab-group {
+    margin-top: component-space(6);
   }
+
+  .mat-tab-label {
+    font-family: 'Dancing Script', cursive;
+    @include fontsize(26);
+    color: $secondary-color;
+    display: inline-block;
+    padding: component-space(1);
+    text-decoration: none;
+    border-bottom: 4px solid transparent;
+    transition: all 0.5s ease-in-out;
+    opacity: 1;
+
+    &.mat-tab-label-active, &:hover {
+      border-bottom-color: $secondary-color;
+    }
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+
+  .mat-tab-body {
+    margin-top: component-space(6);
+  }
+  
+  .title {
+    margin-bottom: component-space(4);
+    @include fontsize(24);
+    font-weight: 700;
+    color: $generic-text;
+  }
+}
+
+
+.tab-info-right {
+  margin-top: component-space(4);
+  text-align: left;
+}
+
+fa-icon {
+  display: inline-block;
+  width: component-space(4);
+  margin-right: component-space(2);
+
+  &[icon="map-marker-alt"] {
+    text-align: center;
+  }
+}
+
+.btn {
+  margin-top: component-space(10);
 }

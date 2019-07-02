@@ -12,16 +12,40 @@ a {
   color: $generic-text;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h5 {
   font-family: 'Dancing Script', cursive;
 }
 
-h2 {
+h2, .h2 {
   @include fontsize(42);
   color: $primary-color;
 }
 
-h3 {
+h3, .h3 {
   @include fontsize(26);
   color: $secondary-color;
+}
+
+p {
+  margin-bottom: component-space(2);
+}
+
+.btn {
+  text-decoration: none;
+
+  &.btn-secondary {
+    background-color: $secondary-color;
+    color: $white;
+    font-weight: 500;
+    border: 2px solid $secondary-color;
+    border-radius: 4px;
+    padding: component-space(1);
+    display: inline-block;
+    min-width: 100px;
+    text-align: center;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }

@@ -3,7 +3,7 @@
 $opacity-white: rgba(255, 255, 255, 0.5);
 
 :host {
-  background-color: white;
+  background-color: $tertiary-color;
 }
 
 .header {
@@ -34,5 +34,6 @@ nav {
   &:hover {
     color: $secondary-color;
     border-bottom-color: $secondary-color;
+    cursor: pointer;
   }
 }

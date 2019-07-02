@@ -3,6 +3,12 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 import { NgbTabsetModule } from '@ng-bootstrap/ng-bootstrap';
+import { Ng2PageScrollModule } from 'ng2-page-scroll';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatIconModule, MatTabsModule } from '@angular/material';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faMapMarkedAlt, faMapMarkerAlt, faClock } from '@fortawesome/free-solid-svg-icons';
 
 import { MainComponent } from './main.component';
 import { routes } from './main.routes';
@@ -18,7 +24,16 @@ const components = [ MainComponent, NavigationComponent, BannerComponent, Matrim
   imports: [
     CommonModule,
     NgbTabsetModule,
+    Ng2PageScrollModule,
+    BrowserAnimationsModule,
+    FontAwesomeModule,
+    MatTabsModule,
+    MatIconModule,
     RouterModule.forRoot(routes)
   ]
 })
-export class MainModule { }
+export class MainModule {
+  constructor() {
+    library.add(faMapMarkedAlt, faMapMarkerAlt, faClock)
+  }
+}

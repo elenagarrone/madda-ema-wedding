@@ -2,7 +2,7 @@
   <nav role="navigation" class="row">
     <ul class="list">
       <li class="list-item" *ngFor="let item of links">
-        <a href="#" class="list-item-link">{{ item.text }}</a>
+        <a pageScroll [href]="item.href" class="list-item-link">{{ item.text }}</a>
       </li>
     </ul>
   </nav>
