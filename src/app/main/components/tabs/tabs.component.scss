@@ -6,7 +6,7 @@ img {
 
 .tabs {
   &.mat-tab-group {
-    margin-top: component-space(6);
+    margin-top: component-space(12);
   }
 
   .mat-tab-label {
@@ -18,14 +18,39 @@ img {
     text-decoration: none;
     border-bottom: 4px solid transparent;
     transition: all 0.5s ease-in-out;
-    opacity: 1;
+    opacity: 0.8;
+    min-width: 160px;
 
     &.mat-tab-label-active, &:hover {
+      opacity: 1;
       border-bottom-color: $secondary-color;
     }
 
     &:hover {
       color: $secondary-color;
+    }
+  }
+
+  .tab-panel-container {
+    .img-left {
+      width: 100%;
+      
+      @include breakpoint(sm) {
+        float: left;
+        width: 50%;
+        height: 450px;
+      }
+    }
+
+    .tab-info-right {
+      margin-top: component-space(4);
+
+      @include breakpoint(sm) {
+        text-align: left;
+        display: inline-block;
+        width: 50%;
+        padding-left: component-space(5);
+      }
     }
   }
 
@@ -41,12 +66,6 @@ img {
   }
 }
 
-
-.tab-info-right {
-  margin-top: component-space(4);
-  text-align: left;
-}
-
 fa-icon {
   display: inline-block;
   width: component-space(4);
@@ -58,5 +77,9 @@ fa-icon {
 }
 
 .btn {
-  margin-top: component-space(10);
+  margin-top: component-space(8);
+
+  @include breakpoint(sm) {
+    margin-top: component-space(10);
+  }
 }

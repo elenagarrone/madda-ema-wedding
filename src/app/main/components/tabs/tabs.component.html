@@ -1,19 +1,17 @@
 <mat-tab-group class="tabs" mat-align-tabs="center" [disableRipple]="true" animationDuration="0ms">
   <ng-container *ngFor="let item of tabs; index as i">
     <mat-tab [label]="item.text">
-      <div class="row">
-        <div class="col-sm-offset-2 col-sm-4">
-          <img src="{{ item.panel.imgSrc }}" alt="" />
+      <div class="tab-panel-container">
+        <div class="img-left img-left-{{i}}">
+          <img [src]="item.panel.imgSrc" alt="" />
         </div>
-        <div class="col-sm-6">
-          <div class="tab-info-right">
-            <h3 class="title">{{ item.panel.content.heading }}</h3>
-            <p><fa-icon icon="map-marker-alt"></fa-icon>{{ item.panel.content.location }}</p>
-            <p><fa-icon icon="clock"></fa-icon>{{ item.panel.content.time }}</p>
-            <a class="btn btn-secondary" href="{{ item.panel.content.mapBtn.href }}" target="_blank">
-              <fa-icon icon="map-marked-alt"></fa-icon>{{ item.panel.content.mapBtn.text }}
-            </a>
-          </div>
+        <div class="tab-info-right">
+          <h3 class="title">{{ item.panel.content.heading }}</h3>
+          <p><fa-icon icon="map-marker-alt"></fa-icon>{{ item.panel.content.location }}</p>
+          <p><fa-icon icon="clock"></fa-icon>{{ item.panel.content.time }}</p>
+          <a class="btn btn-secondary" href="{{ item.panel.content.mapBtn.href }}" target="_blank">
+            <fa-icon icon="map-marked-alt"></fa-icon>{{ item.panel.content.mapBtn.text }}
+          </a>
         </div>
       </div>
     </mat-tab>
