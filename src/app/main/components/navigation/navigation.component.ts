@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class NavigationComponent {
   links = [
     {
+      isHome: true,
       text: 'Matrimonio',
       href: '#matrimonio-section'
     },
