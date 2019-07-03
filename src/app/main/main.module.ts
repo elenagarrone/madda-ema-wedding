@@ -10,7 +10,6 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faMapMarkedAlt, faMapMarkerAlt, faClock, faInfoCircle, faHome } from '@fortawesome/free-solid-svg-icons';
 
-import { MainComponent } from './main.component';
 import { routes } from './main.routes';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { BannerComponent } from './components/banner/banner.component';
@@ -22,18 +21,18 @@ import { DettagliListaViaggioComponent } from './containers/dettagli-lista-viagg
 import { TimelineComponent } from './components/timeline/timeline.component';
 
 const components = [
-  MainComponent,
   NavigationComponent,
   BannerComponent,
   MatrimonioComponent,
   TabsComponent,
   ListaViaggioComponent,
   HomepageComponent,
-  DettagliListaViaggioComponent
+  DettagliListaViaggioComponent,
+  TimelineComponent
 ]
 
 @NgModule({
-  declarations: [ ...components, TimelineComponent ],
+  declarations: [ ...components ],
   imports: [
     CommonModule,
     NgbTabsetModule,
@@ -43,7 +42,8 @@ const components = [
     MatTabsModule,
     MatIconModule,
     RouterModule.forRoot(routes)
-  ]
+  ],
+  exports: [ ...components ]
 })
 export class MainModule {
   constructor() {
