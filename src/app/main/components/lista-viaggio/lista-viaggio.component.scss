@@ -6,6 +6,10 @@
   margin-bottom: component-space(8);
 }
 
+img {
+  margin-top: component-space(6);
+}
+
 p {
   @include fontsize(20);
 }
