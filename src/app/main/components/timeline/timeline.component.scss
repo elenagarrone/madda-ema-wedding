@@ -1,46 +1,15 @@
-$primary: #3F51B5;
-$dark-primary: #303F9F;
-$light-primary: #C5CAE9;
-$text: #FFFFFF;
-$primary-text: #212121;
+@import '../../../../styles/settings';
+
+$primary: #287527;
+$dark-primary: $primary-color;
+$light-primary: #58a057;
+$text: $white;
+$primary-text: $generic-text;
 $secondary-text: #757575;
-$accent: #FF4081;
+$accent: $secondary-color;
 
 section {
   padding: 100px 0;
-}
-
-html, body {
-  overflow-x: hidden;
-}
-
-body {
-  font-family: 'Roboto';
-  font-size: 17px;
-  font-weight: 400;
-  background-color: #eee;
-}
-
-h1 {
-  font-size: 200%;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-weight: 400;
-}
-
-header {
-	background: $primary;
-	color: $text;
-	padding: 150px 0;
-
-	p {
-		font-family: 'Allura';
-		color: rgba(255, 255, 255, .2);
-		margin-bottom: 0;
-		font-size: 60px;
-		margin-top: -30px;
-
-	}
 }
 
 .timeline {
@@ -149,9 +118,10 @@ a {
 
 .timeline-card {
 	padding: 0!important;
+	text-align: left;
 
 	p {
-		padding: 0 20px;
+		padding: 20px;
 	}
 
 	a {
@@ -161,18 +131,24 @@ a {
 
 .timeline-item {
   .timeline-img-header {
-			background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0, .4)), url('https://picsum.photos/1000/800/?random') center center no-repeat;
-			background-size: cover;
+		background-size: contain;
+
+		&.auckland {
+			background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0, .4)), url('../../../../assets/images/auckland.jpg') center center no-repeat;
 		}
+
+		&.nz {
+			background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0, .4)), url('../../../../assets/images/nz.jpg') center center no-repeat;
+		}
+	}
 }
 
 .timeline-img-header {
-
 	height: 200px;
 	position: relative;
-	margin-bottom: 20px;
 
-	h2 {
+	.timeline-title {
+		@include fontsize(40);
 		color: $text;
 		position: absolute;
 		bottom: 5px;
