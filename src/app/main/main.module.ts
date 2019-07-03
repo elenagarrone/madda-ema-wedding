@@ -14,14 +14,26 @@ import { MainComponent } from './main.component';
 import { routes } from './main.routes';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { BannerComponent } from './components/banner/banner.component';
-import { MatrimonioComponent } from './containers/matrimonio/matrimonio.component';
 import { TabsComponent } from './components/tabs/tabs.component';
-import { ListaViaggioComponent } from './containers/lista-viaggio/lista-viaggio.component';
+import { HomepageComponent } from './containers/homepage/homepage.component';
+import { MatrimonioComponent } from './components/matrimonio/matrimonio.component';
+import { ListaViaggioComponent } from './components/lista-viaggio/lista-viaggio.component';
+import { DettagliListaViaggioComponent } from './containers/dettagli-lista-viaggio/dettagli-lista-viaggio.component';
+import { TimelineComponent } from './components/timeline/timeline.component';
 
-const components = [ MainComponent, NavigationComponent, BannerComponent, MatrimonioComponent, TabsComponent, ListaViaggioComponent ]
+const components = [
+  MainComponent,
+  NavigationComponent,
+  BannerComponent,
+  MatrimonioComponent,
+  TabsComponent,
+  ListaViaggioComponent,
+  HomepageComponent,
+  DettagliListaViaggioComponent
+]
 
 @NgModule({
-  declarations: [ ...components ],
+  declarations: [ ...components, TimelineComponent ],
   imports: [
     CommonModule,
     NgbTabsetModule,

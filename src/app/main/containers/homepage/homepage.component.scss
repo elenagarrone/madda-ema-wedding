@@ -1,0 +1,15 @@
+@import '../../../../styles/settings';
+
+.lista-viaggio {
+  text-align: center;
+  margin-top: component-space(8);
+  margin-bottom: component-space(8);
+}
+
+p {
+  @include fontsize(20);
+}
+
+.title {
+  margin-bottom: component-space(5);
+}
