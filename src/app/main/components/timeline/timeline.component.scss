@@ -137,8 +137,52 @@ a {
 			background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0, .4)), url('../../../../assets/images/auckland.jpg') center center no-repeat;
 		}
 
-		&.nz {
-			background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0, .4)), url('../../../../assets/images/nz.jpg') center center no-repeat;
+		&.paihia {
+			background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0, .4)), url('../../../../assets/images/paihia.jpg') center center no-repeat;
+		}
+
+		&.cp {
+			background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0, .4)), url('../../../../assets/images/cp.jpg') center center no-repeat;
+		}
+
+		&.rotorua {
+			background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0, .4)), url('../../../../assets/images/rotorua.jpg') center center no-repeat;
+		}
+
+		&.tnp {
+			background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0, .4)), url('../../../../assets/images/tongariro-national-park.jpg') center center no-repeat;
+		}
+
+		&.wellington {
+			background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0, .4)), url('../../../../assets/images/wellington.jpg') center center no-repeat;
+		}
+
+		&.marahau {
+			background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0, .4)), url('../../../../assets/images/marahau.jpg') center center no-repeat;
+		}
+
+		&.cc {
+			background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0, .4)), url('../../../../assets/images/christchurch.jpg') center center no-repeat;
+		}
+
+		&.lt {
+			background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0, .4)), url('../../../../assets/images/lake-tekapo.jpg') center center no-repeat;
+		}
+
+		&.queenstown {
+			background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0, .4)), url('../../../../assets/images/queenstown.jpg') center center no-repeat;
+		}
+
+		&.ms {
+			background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0, .4)), url('../../../../assets/images/milford-sound.jpg') center center no-repeat;
+		}
+
+		&.nadi {
+			background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0, .4)), url('../../../../assets/images/nadi.jpg') center center no-repeat;
+		}
+
+		&.lr {
+			background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0, .4)), url('../../../../assets/images/lomani-resort.jpg') center center no-repeat;
 		}
 	}
 }
