@@ -41,7 +41,7 @@ const components = [
     FontAwesomeModule,
     MatTabsModule,
     MatIconModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled'})
   ],
   exports: [ ...components ]
 })
