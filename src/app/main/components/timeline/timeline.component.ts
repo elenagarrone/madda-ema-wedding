@@ -12,7 +12,7 @@ export class TimelineComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    window.sr = ScrollReveal();
+    const sr = new ScrollReveal();
 
     if (window.innerWidth < 768) {
       const fadeInLeftEls = document.querySelectorAll('.timeline-content.js--fadeInLeft');

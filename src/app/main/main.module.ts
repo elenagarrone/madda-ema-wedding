@@ -27,8 +27,8 @@ const components = [
   TabsComponent,
   ListaViaggioComponent,
   HomepageComponent,
+  TimelineComponent,
   DettagliListaViaggioComponent,
-  TimelineComponent
 ]
 
 @NgModule({
