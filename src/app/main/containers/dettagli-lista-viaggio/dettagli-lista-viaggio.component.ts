@@ -14,14 +14,12 @@ export class DettagliListaViaggioComponent implements OnInit {
   ngOnInit() {
     const sr = new ScrollReveal();
 
-    if (window.innerWidth >= 768) {
-      sr.reveal('.js--fadeInBottom', {
-        origin: 'bottom',
-        distance: '300px',
-        easing: 'ease-in-out',
-        duration: 800,
-      });
-    }
+    sr.reveal('.js--fadeInBottom', {
+      origin: 'bottom',
+      distance: '300px',
+      easing: 'ease-in-out',
+      duration: 800,
+    });
   }
 
 }
