@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 
 import { NgbTabsetModule } from '@ng-bootstrap/ng-bootstrap';
 import { Ng2PageScrollModule } from 'ng2-page-scroll';
+import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule, MatTabsModule } from '@angular/material';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -19,6 +20,7 @@ import { MatrimonioComponent } from './components/matrimonio/matrimonio.componen
 import { ListaViaggioComponent } from './components/lista-viaggio/lista-viaggio.component';
 import { DettagliListaViaggioComponent } from './containers/dettagli-lista-viaggio/dettagli-lista-viaggio.component';
 import { TimelineComponent } from './components/timeline/timeline.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 const components = [
   NavigationComponent,
@@ -29,7 +31,8 @@ const components = [
   HomepageComponent,
   TimelineComponent,
   DettagliListaViaggioComponent,
-]
+  FooterComponent
+];
 
 @NgModule({
   declarations: [ ...components ],
@@ -37,6 +40,7 @@ const components = [
     CommonModule,
     NgbTabsetModule,
     Ng2PageScrollModule,
+    NgxPageScrollCoreModule,
     BrowserAnimationsModule,
     FontAwesomeModule,
     MatTabsModule,

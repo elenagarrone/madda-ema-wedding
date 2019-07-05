@@ -1,11 +1,17 @@
 <header role="banner" class="header container">
   <nav role="navigation" class="row">
-    <ul class="list">
+    <ul class="list" *ngIf="links$ | async as links">
       <li class="list-item" *ngFor="let item of links">
-        <a pageScroll [href]="item.href" class="list-item-link">
-            <fa-icon *ngIf="item.isHome"icon="home"></fa-icon>
+        <a *ngIf="item.pageScroll; else elseBlock" pageScroll [href]="item.href" class="list-item-link">
+           <fa-icon *ngIf="item.isHome"icon="home"></fa-icon>
           {{ item.text }}
         </a>
+        <ng-template #elseBlock>
+          <a  [routerLink]="[item.href]" [fragment]="item.fragment ? item.fragment : ''" class="list-item-link">
+            <fa-icon *ngIf="item.isHome"icon="home"></fa-icon>
+            {{ item.text }}
+          </a>
+        </ng-template>
       </li>
     </ul>
   </nav>
