@@ -30,7 +30,6 @@ export class NavigationComponent implements OnInit {
     this.router.events.pipe(filter(event => event instanceof NavigationStart))
       .subscribe(event => {
         const url = (event as NavigationStart).url;
-        console.log(url);
         if (url === '/dettagli-lista-viaggio') {
           this.links$.next([
             {
