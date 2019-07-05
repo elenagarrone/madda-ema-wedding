@@ -1,6 +1,13 @@
 @import '../../../../styles/settings';
 
 .footer {
-  background-color: $white;
-  height: component-space(5);
+  background-color: #f8e7df;
+  text-align: center;
+  padding: component-space(8);
+  padding: component-space(8);
+  margin-top:component-space(8);
+}
+
+.title {
+  margin-bottom: component-space(5);
 }

@@ -1,5 +1,5 @@
 <div class="banner">
-  <div class="counter">
+  <div class="counter" *ngIf="timeLeft">
     <h1>Emanuele e Maddalena</h1>
     <p class="location">Parrocchia di San Giovanni Battista</p>
     <p class="time" *ngIf="timeLeft?.days">{{timeLeft.days}} <span>giorni</span></p>

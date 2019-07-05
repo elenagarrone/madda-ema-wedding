@@ -1,14 +1,44 @@
 @import '../../../../styles/settings';
 
 .lista-viaggio {
+  position: relative;
   overflow: hidden;
   text-align: center;
   margin-top: component-space(8);
   margin-bottom: component-space(8);
 }
 
+.info {
+  background-color: #f5f5f5;
+  padding: 20px;
+  z-index: 1;
+
+  @include breakpoint(sm) {
+    position: absolute;
+    width: 60%;
+  }
+
+  @include breakpoint(md) {
+    box-shadow: 0 20px 25px -15px rgba(0, 0, 0, 0.3);
+    top: 13%;
+    left: 0;
+    padding: 65px;
+  }
+}
+
 img {
   margin-top: component-space(6);
+
+  @include breakpoint(sm) {
+    float: right;
+    height: auto;
+    width: auto;
+    max-width: 50%;
+  }
+
+  @include breakpoint(md) {
+    height: 600px;
+  }
 }
 
 p {
@@ -16,5 +46,6 @@ p {
 }
 
 .title {
+  text-align: center;
   margin-bottom: component-space(5);
 }

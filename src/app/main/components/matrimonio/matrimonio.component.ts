@@ -9,7 +9,6 @@ export class MatrimonioComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
 }

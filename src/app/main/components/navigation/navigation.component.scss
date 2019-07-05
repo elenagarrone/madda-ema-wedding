@@ -1,13 +1,7 @@
 @import '../../../../styles/settings';
 
-$opacity-white: rgba(255, 255, 255, 0.5);
-
 :host {
   background-color: $tertiary-color;
-}
-
-.header {
-  background-color: $opacity-white;
 }
 
 nav {

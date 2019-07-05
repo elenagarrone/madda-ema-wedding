@@ -1,4 +1,6 @@
-import { Component, ViewEncapsulation, Input } from '@angular/core';
+import { Component, ViewEncapsulation, Input, OnInit } from '@angular/core';
+
+import ScrollReveal from 'scrollreveal';
 
 @Component({
   selector: 'app-tabs',
@@ -6,7 +8,7 @@ import { Component, ViewEncapsulation, Input } from '@angular/core';
   styleUrls: ['./tabs.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class TabsComponent {
+export class TabsComponent implements OnInit {
   @Input() selectedIndex = 0;
 
   tabs = [
@@ -41,5 +43,18 @@ export class TabsComponent {
         }
       }
     }
-  ]
+  ];
+
+  ngOnInit() {
+    const sr = new ScrollReveal();
+
+    if (window.innerWidth >= 768) {
+      sr.reveal('.js--fadeInBottom', {
+        origin: 'bottom',
+        distance: '300px',
+        easing: 'ease-in-out',
+        duration: 800,
+      });
+    }
+  }
 }
