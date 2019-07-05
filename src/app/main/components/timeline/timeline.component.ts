@@ -28,7 +28,7 @@ export class TimelineComponent implements OnInit {
         origin: 'right',
         distance: '300px',
         easing: 'ease-in-out',
-        duration: 800,
+        duration: 500,
       });
     } else {        	
       sr.reveal('.js--fadeInLeft', {
