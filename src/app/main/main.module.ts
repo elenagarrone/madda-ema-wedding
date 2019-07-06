@@ -21,6 +21,7 @@ import { ListaViaggioComponent } from './components/lista-viaggio/lista-viaggio.
 import { DettagliListaViaggioComponent } from './containers/dettagli-lista-viaggio/dettagli-lista-viaggio.component';
 import { TimelineComponent } from './components/timeline/timeline.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { HttpClientModule } from '@angular/common/http';
 
 const components = [
   NavigationComponent,
@@ -45,7 +46,8 @@ const components = [
     FontAwesomeModule,
     MatTabsModule,
     MatIconModule,
-    RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled'})
+    RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled'}),
+    HttpClientModule,
   ],
   exports: [ ...components ]
 })
