@@ -1,19 +1,32 @@
 @import '../../../../styles/settings';
 
 .banner {
-  background-image: url(../../../../assets/images/banner-img.jpg), linear-gradient(to bottom right, #002f4b1c, #dc42251f);;
+  background-image: url(../../../../assets/images/banner-img2.jpg), linear-gradient(to bottom right, #002f4b1c, #dc42251f);;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 400px;
+  background-position: center;
+  height: 762px;
   text-align: center;
   color: $white;
 
+  @include breakpoint(sm) {
+    height: 655px;
+  }
+
+  @include breakpoint(md) {
+    height: 800px;
+  }
+
   .counter {
-    margin-top: component-space(21);
+    margin-top: component-space(6);
     background-color: #67696670;
     display: inline-block;
     padding: component-space(6);
     border-radius: 6px;
+
+    @include breakpoint(sm) {
+      margin-top: component-space(12);
+    }
   }
 
   .time {
