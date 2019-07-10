@@ -17,6 +17,10 @@
     height: 800px;
   }
 
+  @include breakpoint(lg) {
+    background-size: 1500px;
+  }
+
   .counter {
     margin-top: component-space(6);
     background-color: #67696670;

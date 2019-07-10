@@ -31,3 +31,96 @@ nav {
     cursor: pointer;
   }
 }
+
+  .burger-container {
+    @include breakpoint(0, xxs) {
+      float: right;
+      margin: 15px 15px 25px;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+    }
+  }
+  .burger {
+    @include breakpoint(0, xxs) {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .burger::after , .burger::before {
+    @include breakpoint(0, xxs) {
+      content: "";
+      position: absolute;
+      width: 100%;
+    }
+  }
+  .burger::after {
+    @include breakpoint(0, xxs) {
+      bottom: 9px;
+    }
+  }
+  .burger::before {
+    @include breakpoint(0, xxs) {
+      bottom: 20px;
+    }
+  }
+  .burger1 {
+    @include breakpoint(0, xxs) {
+      color: $burger-menu;
+      border-bottom: 2px solid $burger-menu;
+      transition: border-bottom 1s;
+    }
+  }
+  .burger1::after {
+    @include breakpoint(0, xxs) {
+      border-bottom: 2px solid $burger-menu;
+      transition: transform 1s;
+    }
+  }
+  .burger1::before {
+    @include breakpoint(0, xxs) {
+      border-bottom: 2px solid $burger-menu;
+      transition: transform 1s;
+    }
+  }
+  .burger1-open {
+    @include breakpoint(0, xxs) {
+      border-bottom: 2px solid transparent;
+    }
+  }
+  .burger1-open::after {
+    @include breakpoint(0, xxs) {
+      transform: rotate(45deg) translate(-7px, -9px);
+    }
+  }
+  .burger1-open::before {
+    @include breakpoint(0, xxs) {
+      transform: rotate(-45deg);
+    }
+  }
+
+  .list {
+    @include breakpoint(0, xxs) {
+      display: none;
+    }
+
+    &.open-menu {
+      @include breakpoint(0, xxs) {
+        display: block;
+        width: 100%;
+      }
+
+      .list-item {
+        @include breakpoint(0, xxs) {
+          display: block;
+        }
+      }
+
+      .list-item-link {
+        @include breakpoint(0, xxs) {
+          width: 100%;
+        }
+      }
+    }
+  }

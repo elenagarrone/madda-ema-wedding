@@ -1,6 +1,13 @@
 <header role="banner" class="header container">
   <nav role="navigation" class="row">
-    <ul class="list" *ngIf="links$ | async as links">
+    <div class="burger-container">
+      <div class="burger burger1"
+           id="burger1"
+           tabindex="0"
+           (click)="toggleBurgerMenu()"
+           [ngClass]="{ 'burger1-open': isBurgerMenuToggled }"></div>
+    </div>
+    <ul class="list" [ngClass]="{ 'open-menu': isBurgerMenuToggled }" *ngIf="links$ | async as links">
       <li class="list-item" *ngFor="let item of links">
         <a *ngIf="item.pageScroll; else elseBlock" pageScroll [href]="item.href" class="list-item-link">
            <fa-icon *ngIf="item.isHome"icon="home"></fa-icon>

@@ -9,6 +9,7 @@ import { filter } from 'rxjs/operators';
   styleUrls: ['./navigation.component.scss']
 })
 export class NavigationComponent implements OnInit {
+  isBurgerMenuToggled: boolean;
   links = [
     {
       isHome: true,
@@ -49,5 +50,9 @@ export class NavigationComponent implements OnInit {
           this.links$.next(this.links);
         }
     })
+  }
+
+  toggleBurgerMenu() {
+    this.isBurgerMenuToggled = !this.isBurgerMenuToggled;
   }
 }
