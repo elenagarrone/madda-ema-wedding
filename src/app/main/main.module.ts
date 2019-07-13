@@ -9,7 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule, MatTabsModule } from '@angular/material';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faMapMarkedAlt, faMapMarkerAlt, faClock, faInfoCircle, faHome } from '@fortawesome/free-solid-svg-icons';
+import { faClock, faHome, faInfoCircle, faMapMarkedAlt, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 
 import { routes } from './main.routes';
 import { NavigationComponent } from './components/navigation/navigation.component';
@@ -23,6 +23,7 @@ import { TimelineComponent } from './components/timeline/timeline.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { InstagramComponent } from './components/instagram/instagram.component';
+import { RsvpComponent } from './components/rsvp/rsvp.component';
 
 const components = [
   NavigationComponent,
@@ -33,7 +34,8 @@ const components = [
   HomepageComponent,
   TimelineComponent,
   DettagliListaViaggioComponent,
-  FooterComponent
+  FooterComponent,
+  RsvpComponent
 ];
 
 @NgModule({
