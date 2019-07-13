@@ -9,16 +9,18 @@
           <h3 class="title">{{ item.panel.content.heading }}</h3>
           <p><fa-icon icon="map-marker-alt"></fa-icon>{{ item.panel.content.location }}</p>
           <p><fa-icon icon="clock"></fa-icon>{{ item.panel.content.time }}</p>
+          <p *ngIf="item.panel.content.info as info" class="info">
+            <fa-icon icon="info-circle"></fa-icon>
+            <span class="info-text">
+              <strong>Info parcheggio: </strong>
+              {{info}}
+            </span>
+          </p>
           <a class="btn btn-secondary btn-sm-block" href="{{ item.panel.content.mapBtn.href }}" target="_blank">
             <fa-icon icon="map-marked-alt"></fa-icon>{{ item.panel.content.mapBtn.text }}
           </a>
         </div>
       </div>
-      <p *ngIf="item.panel.content.info as info" class="info">
-        <fa-icon icon="info-circle"></fa-icon>
-        <strong>Info parcheggio: </strong>
-        {{info}}
-      </p>
     </mat-tab>
   </ng-container>
 </mat-tab-group>

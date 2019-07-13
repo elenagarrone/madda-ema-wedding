@@ -52,6 +52,10 @@ img {
       @include breakpoint(md) {
         display: inline-block;
         width: 50%;
+        margin-top: component-space(3);
+      }
+
+      @include breakpoint(lg) {
         margin-top: component-space(12);
       }
 
@@ -83,14 +87,28 @@ fa-icon {
   }
 }
 
-.btn, .info {
+.btn {
   margin-top: component-space(8);
 
   @include breakpoint(md) {
+    margin-top: component-space(6);
+  }
+
+  @include breakpoint(lg) {
     margin-top: component-space(10);
   }
 }
 
 .info {
   text-align: left;
+  position: relative;
+
+  fa-icon {
+    position: absolute;
+  }
+
+  .info-text {
+    display: inline-block;
+    margin-left: 24px;
+  }
 }

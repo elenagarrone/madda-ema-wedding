@@ -39,7 +39,7 @@ export class TabsComponent implements OnInit {
             text: 'Mappa',
             href: 'https://goo.gl/maps/J6wN3Ts7y1vdVdC76'
           },
-          info: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+          info: 'E\' presente un parcheggio all\'interno della Villa. E\' possibile accedervi e parcheggiare auto o moto già prima della cerimonia in chiesa.'
         }
       }
     }
