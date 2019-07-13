@@ -9,7 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule, MatTabsModule } from '@angular/material';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faClock, faHome, faInfoCircle, faMapMarkedAlt, faMapMarkerAlt, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
+import { faClock, faHome, faInfoCircle, faMapMarkedAlt, faMapMarkerAlt, faTimesCircle, faPlusCircle } from '@fortawesome/free-solid-svg-icons';
 
 import { routes } from './main.routes';
 import { NavigationComponent } from './components/navigation/navigation.component';
@@ -58,6 +58,6 @@ const components = [
 })
 export class MainModule {
   constructor() {
-    library.add(faMapMarkedAlt, faMapMarkerAlt, faClock, faInfoCircle, faHome, faTimesCircle);
+    library.add(faMapMarkedAlt, faMapMarkerAlt, faClock, faInfoCircle, faHome, faTimesCircle, faPlusCircle);
   }
 }

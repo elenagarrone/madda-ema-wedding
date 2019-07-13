@@ -3,17 +3,22 @@
     <p>Per favore confermateci la vostra presenza al matrimonio il prima possibile, inserite i vostri nomi qui sotto!</p>
 
   <form [formGroup]="rsvpForm">
-    <div formArrayName="people">
-      <div *ngFor="let item of people.controls; let nameIndex=index" [formGroupName]="nameIndex">
-        <label for="input-{{nameIndex}}" class="access">Nome</label>
-        <input id="input-{{nameIndex}}" placeholder="Nome" formControlName="name">
-        <button class="btn-close" type="button" (click)="deletePeople(nameIndex)">
-          <fa-icon icon="times-circle" size="lg"></fa-icon>
+    <div class="fields" formArrayName="people">
+      <div *ngFor="let item of people.controls; let nameIndex=index; last as isLast" [formGroupName]="nameIndex" class="form-field">
+        <div class="wrapper">
+          <label for="input-{{nameIndex}}" class="access">Nome</label>
+          <input id="input-{{nameIndex}}" placeholder="Nome" formControlName="name">
+          <button class="btn-i btn-close" type="button" (click)="deletePeople(nameIndex)">
+            <fa-icon icon="times-circle" size="lg"></fa-icon>
+            <span class="access">Elimina nome</span>
+          </button>
+        </div>
+        <button *ngIf="isLast" class="btn-i btn-add" type="button" (click)="addPeople()">
+          <fa-icon icon="plus-circle" size="lg"></fa-icon>
+          <span>Aggiungi un altro nome</span>
         </button>
       </div>
-      <button type="button" (click)="addPeople()">Add Person</button>
+      <button class="btn btn-secondary">Conferma RSVP</button>
     </div>
   </form>
-
-  {{ rsvpForm.value | json }}
 </div>

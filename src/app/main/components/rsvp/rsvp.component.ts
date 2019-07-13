@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormGroup } from '@angular/forms';
 
+import ScrollReveal from 'scrollreveal';
+
 @Component({
   selector: 'app-rsvp',
   templateUrl: './rsvp.component.html',
@@ -12,6 +14,15 @@ export class RsvpComponent implements OnInit {
   constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit() {
+    const sr = new ScrollReveal();
+
+    sr.reveal('.js--fadeInBottom', {
+      origin: 'bottom',
+      distance: '300px',
+      easing: 'ease-in-out',
+      duration: 800,
+    });
+
     this.rsvpForm = this.formBuilder.group({
       people: this.formBuilder.array([ this.formBuilder.group({ name: '' }) ]),
     });
