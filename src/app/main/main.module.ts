@@ -43,6 +43,7 @@ const components = [
   declarations: [ ...components, InstagramComponent ],
   imports: [
     CommonModule,
+    HttpClientModule,
     NgbTabsetModule,
     Ng2PageScrollModule,
     NgxPageScrollCoreModule,

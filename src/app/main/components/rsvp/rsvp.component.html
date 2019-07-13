@@ -2,7 +2,7 @@
     <h2 class="title">Rsvp</h2>
     <p>Per favore confermateci la vostra presenza al matrimonio il prima possibile, inserite i vostri nomi qui sotto!</p>
 
-  <form [formGroup]="rsvpForm">
+  <form [formGroup]="rsvpForm" (ngSubmit)="submitForm()">
     <div class="fields" formArrayName="people">
       <div *ngFor="let item of people.controls; let nameIndex=index; last as isLast" [formGroupName]="nameIndex" class="form-field">
         <div class="wrapper">

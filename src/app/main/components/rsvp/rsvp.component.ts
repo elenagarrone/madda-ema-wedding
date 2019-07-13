@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormGroup } from '@angular/forms';
 
 import ScrollReveal from 'scrollreveal';
+import { MailService } from '../../mail-service/mail.service';
 
 @Component({
   selector: 'app-rsvp',
@@ -11,7 +12,10 @@ import ScrollReveal from 'scrollreveal';
 export class RsvpComponent implements OnInit {
   rsvpForm: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(
+    private mailService: MailService,
+    private formBuilder: FormBuilder
+  ) { }
 
   ngOnInit() {
     const sr = new ScrollReveal();
@@ -38,5 +42,17 @@ export class RsvpComponent implements OnInit {
 
   deletePeople(index) {
     this.people.removeAt(index);
+  }
+
+  submitForm(): void {
+    this.mailService.send(this.rsvpForm.value)
+      .subscribe(
+        res => {
+          console.log(res);
+        }
+      );
+    setTimeout(function() {
+      alert('Email sent!');
+    }, 1000);
   }
 }
