@@ -24,6 +24,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { InstagramComponent } from './components/instagram/instagram.component';
 import { RsvpComponent } from './components/rsvp/rsvp.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 const components = [
   NavigationComponent,
@@ -51,6 +52,7 @@ const components = [
     MatIconModule,
     RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled'}),
     HttpClientModule,
+    ReactiveFormsModule,
   ],
   exports: [ ...components ]
 })

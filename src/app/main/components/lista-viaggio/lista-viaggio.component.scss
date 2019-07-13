@@ -5,6 +5,7 @@
   text-align: center;
   margin-top: component-space(8);
   margin-bottom: component-space(8);
+  @include clearfix;
 }
 
 .info {
@@ -15,6 +16,11 @@
   @include breakpoint(sm) {
     position: absolute;
     width: 60%;
+    top: component-space(4);
+  }
+
+  @include breakpoint(805px) {
+    top: component-space(18);
   }
 
   @include breakpoint(md) {
@@ -22,6 +28,10 @@
     top: 13%;
     left: 0;
     padding: 65px;
+  }
+
+  @include breakpoint(lg) {
+    top: component-space(25);
   }
 }
 
