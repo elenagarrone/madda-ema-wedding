@@ -1,4 +1,19 @@
 <div class="rsvp" id="rsvp-section">
     <h2 class="title">Rsvp</h2>
     <p>Per favore confermateci la vostra presenza al matrimonio il prima possibile, inserite i vostri nomi qui sotto!</p>
+
+  <form [formGroup]="rsvpForm">
+    <div formArrayName="people">
+      <div *ngFor="let item of people.controls; let nameIndex=index" [formGroupName]="nameIndex">
+        <label for="input-{{nameIndex}}" class="access">Nome</label>
+        <input id="input-{{nameIndex}}" placeholder="Nome" formControlName="name">
+        <button class="btn-close" type="button" (click)="deletePeople(nameIndex)">
+          <fa-icon icon="times-circle" size="lg"></fa-icon>
+        </button>
+      </div>
+      <button type="button" (click)="addPeople()">Add Person</button>
+    </div>
+  </form>
+
+  {{ rsvpForm.value | json }}
 </div>

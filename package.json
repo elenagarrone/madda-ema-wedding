@@ -32,6 +32,7 @@
     "core-js": "^2.5.4",
     "express": "^4.17.1",
     "font-awesome": "^4.7.0",
+    "keyboard-focus": "^1.0.1",
     "mdn-polyfills": "^5.17.1",
     "ng2-page-scroll": "^4.0.0-beta.12",
     "ngx-page-scroll-core": "^6.0.2",

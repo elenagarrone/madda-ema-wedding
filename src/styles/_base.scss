@@ -82,3 +82,11 @@ strong {
 main {
   overflow: hidden;
 }
+
+.access {
+  @include access;
+}
+
+:focus:not([keyboard-focus]) {
+  outline-width: 0;
+}

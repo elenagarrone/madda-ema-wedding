@@ -4,12 +4,57 @@
   text-align: center;
   margin-top: component-space(8);
   margin-bottom: component-space(12);
+
+  p {
+    @include fontsize(20);
+  }
+
+  .title {
+    margin-bottom: component-space(5);
+  }
+
+  form {
+    margin-top: component-space(5);
+  }
+
+  input {
+    background-color: #f8e7df;
+    padding: component-space(1) component-space(9) component-space(1) component-space(2);
+    line-height: 1.8;
+    width: 300px;
+    border-color: transparent;
+    @include fontsize(18);
+    transition: all 0.25s ease-in;
+
+    &:focus {
+      outline: none;
+      border-bottom-color: $secondary-color;
+    }
+  }
+
+  input:focus::-webkit-input-placeholder { color:transparent; }
+  input:focus:-moz-placeholder { color:transparent; } /* Firefox 18- */
+  input:focus::-moz-placeholder { color:transparent; } /* Firefox 19+ */
+  input:focus:-ms-input-placeholder { color:transparent; } /* oldIE ;) */
+
+  .btn-close {
+    position: relative;
+    right: 49px;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    padding: 20px;
+
+    &:hover fa-icon {
+      opacity: 1;
+    }
+
+    fa-icon {
+      color: $generic-text;
+      opacity: 0.6;
+      transition: all 0.25s ease-in;
+      margin-right: 0;
+    }
+  }
 }
 
-p {
-  @include fontsize(20);
-}
-
-.title {
-  margin-bottom: component-space(5);
-}
