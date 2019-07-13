@@ -22,6 +22,7 @@ import { DettagliListaViaggioComponent } from './containers/dettagli-lista-viagg
 import { TimelineComponent } from './components/timeline/timeline.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
+import { InstagramComponent } from './components/instagram/instagram.component';
 
 const components = [
   NavigationComponent,
@@ -36,7 +37,7 @@ const components = [
 ];
 
 @NgModule({
-  declarations: [ ...components ],
+  declarations: [ ...components, InstagramComponent ],
   imports: [
     CommonModule,
     NgbTabsetModule,

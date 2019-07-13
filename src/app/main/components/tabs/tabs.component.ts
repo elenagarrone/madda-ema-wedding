@@ -12,7 +12,7 @@ export class TabsComponent implements OnInit {
   @Input() selectedIndex = 0;
 
   tabs = [
-    { 
+    {
       text: 'Cerimonia',
       panel: {
         imgSrc: '../../../../assets/images/chiesa.jpg',
