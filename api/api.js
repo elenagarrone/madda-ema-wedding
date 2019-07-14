@@ -1,17 +1,10 @@
-let config = {};
-try {
-  config = require('./secrets');
-} catch (ex) {
-  handleErr(ex);
-}
-
 const express = require('express');
 const router = express.Router();
 
-const api_key = process.env.API_KEY || config.API_KEY;
-const domain = process.env.DOMAIN || config.DOMAIN;
-const recipients = process.env.RECIPIENTS || config.RECIPIENTS;
-const senderAddress = process.env.SENDER || config.SENDER;
+const api_key = process.env.API_KEY;
+const domain = process.env.DOMAIN;
+const recipients = process.env.RECIPIENTS;
+const senderAddress = process.env.SENDER;
 
 const mailgun = require('mailgun-js')({
   apiKey: api_key,
@@ -33,6 +26,7 @@ router.get('/', (req, res) => {
 router.post('/post', (req, res) => {
   req.setTimeout(0);
   data.text = req.body.body;
+  console.log('data', data);
 
   mailgun.messages().send(data, {'content-type': 'text/html'}, function (error, body) {
     res.send(body);
