@@ -9,7 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule, MatTabsModule } from '@angular/material';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faMapMarkedAlt, faMapMarkerAlt, faClock, faInfoCircle, faHome } from '@fortawesome/free-solid-svg-icons';
+import { faClock, faHome, faInfoCircle, faMapMarkedAlt, faMapMarkerAlt, faTimesCircle, faPlusCircle } from '@fortawesome/free-solid-svg-icons';
 
 import { routes } from './main.routes';
 import { NavigationComponent } from './components/navigation/navigation.component';
@@ -23,6 +23,8 @@ import { TimelineComponent } from './components/timeline/timeline.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { InstagramComponent } from './components/instagram/instagram.component';
+import { RsvpComponent } from './components/rsvp/rsvp.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 const components = [
   NavigationComponent,
@@ -33,13 +35,15 @@ const components = [
   HomepageComponent,
   TimelineComponent,
   DettagliListaViaggioComponent,
-  FooterComponent
+  FooterComponent,
+  RsvpComponent
 ];
 
 @NgModule({
   declarations: [ ...components, InstagramComponent ],
   imports: [
     CommonModule,
+    HttpClientModule,
     NgbTabsetModule,
     Ng2PageScrollModule,
     NgxPageScrollCoreModule,
@@ -49,11 +53,12 @@ const components = [
     MatIconModule,
     RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled'}),
     HttpClientModule,
+    ReactiveFormsModule,
   ],
   exports: [ ...components ]
 })
 export class MainModule {
   constructor() {
-    library.add(faMapMarkedAlt, faMapMarkerAlt, faClock, faInfoCircle, faHome)
+    library.add(faMapMarkedAlt, faMapMarkerAlt, faClock, faInfoCircle, faHome, faTimesCircle, faPlusCircle);
   }
 }

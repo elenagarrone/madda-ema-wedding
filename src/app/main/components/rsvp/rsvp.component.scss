@@ -1,0 +1,127 @@
+@import '../../../../styles/settings';
+
+.rsvp {
+  text-align: center;
+  margin-top: component-space(8);
+  margin-bottom: component-space(12);
+
+  p {
+    @include fontsize(20);
+  }
+
+  .title {
+    margin-bottom: component-space(5);
+  }
+
+  form {
+    margin-top: component-space(5);
+  }
+
+  .fields {
+    @include breakpoint(sm) {
+      width: 50%;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    @include breakpoint(md) {
+      width: 40%;
+    }
+
+    @include breakpoint(1160px) {
+      width: 32%;
+    }
+  }
+
+  .wrapper {
+    position: relative;
+  }
+
+  .form-field + .form-field {
+    margin-top: component-space(4);
+  }
+
+  input {
+    background-color: #f8e7df;
+    padding: component-space(1) component-space(9) component-space(1) component-space(2);
+    line-height: 1.8;
+    width: 100%;
+    border-color: transparent;
+    border-radius: 4px;
+    @include fontsize(18);
+    transition: all 0.25s ease-in;
+
+    &:focus {
+      outline: none;
+      border-bottom-color: $secondary-color;
+    }
+  }
+
+  input:focus::-webkit-input-placeholder { color:transparent; }
+  input:focus:-moz-placeholder { color:transparent; } /* Firefox 18- */
+  input:focus::-moz-placeholder { color:transparent; } /* Firefox 19+ */
+  input:focus:-ms-input-placeholder { color:transparent; } /* oldIE ;) */
+
+  .btn-i {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    padding: component-space(5);
+
+    fa-icon {
+      color: $generic-text;
+      margin-right: 0;
+    }
+  }
+
+  .btn-add {
+    @include breakpoint(sm) {
+      display: block;
+      margin: 0 auto;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    fa-icon {
+      margin-right: component-space(2);
+    }
+  }
+
+  .btn-close {
+    position: absolute;
+    right: -7px;
+    top: -4px;
+
+    &:hover fa-icon {
+      opacity: 1;
+    }
+
+    fa-icon {
+      opacity: 0.6;
+      transition: all 0.25s ease-in;
+    }
+  }
+
+  .btn-secondary {
+    width: 100%;
+    margin-top: component-space(2);
+
+    @include breakpoint(sm) {
+      display: block;
+      width: auto;
+      margin: component-space(2) auto 0;
+    }
+  }
+
+  .confirmation {
+    margin: 0 auto;
+    text-align: center;
+    padding: component-space(3);
+    border-radius: 4px;
+    @include fontsize(18);
+    font-weight: 400;
+  }
+}
+
