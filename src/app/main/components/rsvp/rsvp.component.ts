@@ -12,6 +12,7 @@ import { MailService } from '../../mail-service/mail.service';
 export class RsvpComponent implements OnInit {
   rsvpForm: FormGroup;
   peopleArray: Array<string>;
+  showConfirmation: boolean;
 
   constructor(
     private mailService: MailService,
@@ -52,10 +53,10 @@ export class RsvpComponent implements OnInit {
   submitForm(): void {
     if (this.peopleArray.length > 0) {
       const listOfPeople = this.peopleArray.join(', ');
-      this.mailService.send(listOfPeople).subscribe(res => { console.log('rsvp component send', res); });
-      setTimeout(function() {
-        alert('Email sent!');
-      }, 1000);
+      this.mailService.send(listOfPeople).subscribe(res => {
+        console.log('sending RSVP', res);
+      });
+      this.showConfirmation = true;
     }
   }
 }

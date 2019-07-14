@@ -114,5 +114,14 @@
       margin: component-space(2) auto 0;
     }
   }
+
+  .confirmation {
+    margin: 0 auto;
+    text-align: center;
+    padding: component-space(3);
+    border-radius: 4px;
+    @include fontsize(18);
+    font-weight: 400;
+  }
 }
 
