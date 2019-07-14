@@ -1,4 +1,10 @@
-const config = require('./secrets');
+let config = {};
+try {
+  config = require('./secrets');
+} catch (ex) {
+  handleErr(ex);
+}
+
 const express = require('express');
 const router = express.Router();
 
