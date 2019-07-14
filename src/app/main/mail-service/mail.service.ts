@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
@@ -7,15 +7,13 @@ import { HttpClient } from '@angular/common/http';
 })
 export class MailService {
   template: string;
-  currentPos = 1;
-  public pos: any = new BehaviorSubject(this.currentPos);
 
   constructor(public http: HttpClient) {
-    this.template = 'Ciao!\r\n\r\n hai nuovi RSVP: [PERSONE].';
+    this.template = 'Ciao Madda!\r\nhai nuovi RSVP per il matrimonio:\r\n\r\n[PERSONE].';
   }
 
   send(people: string) {
     const body = this.template.replace('[PERSONE]', people);
-    return this.http.post('/api/post', {sender: 'elenagarrone.dev@gmail.com', subject: 'RSVP matrimonio', body: body});
+    return this.http.post('/api/post', {body: body});
   }
 }

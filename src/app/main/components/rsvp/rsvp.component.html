@@ -13,12 +13,12 @@
             <span class="access">Elimina nome</span>
           </button>
         </div>
-        <button *ngIf="isLast" class="btn-i btn-add" type="button" (click)="addPeople()">
+      </div>
+        <button class="btn-i btn-add" type="button" (click)="addPeople()">
           <fa-icon icon="plus-circle" size="lg"></fa-icon>
           <span>Aggiungi un altro nome</span>
         </button>
-      </div>
-      <button class="btn btn-secondary">Conferma RSVP</button>
+      <button *ngIf="!!peopleArray?.length" class="btn btn-secondary">Conferma RSVP</button>
     </div>
   </form>
 </div>

@@ -11,6 +11,7 @@ import { MailService } from '../../mail-service/mail.service';
 })
 export class RsvpComponent implements OnInit {
   rsvpForm: FormGroup;
+  peopleArray: Array<string>;
 
   constructor(
     private mailService: MailService,
@@ -30,6 +31,10 @@ export class RsvpComponent implements OnInit {
     this.rsvpForm = this.formBuilder.group({
       people: this.formBuilder.array([ this.formBuilder.group({ name: '' }) ]),
     });
+
+    this.rsvpForm.valueChanges.subscribe(val => {
+      this.peopleArray = this.rsvpForm.value.people.map(v => v.name).filter(v => v);
+    });
   }
 
   get people() {
@@ -45,14 +50,12 @@ export class RsvpComponent implements OnInit {
   }
 
   submitForm(): void {
-    this.mailService.send(this.rsvpForm.value)
-      .subscribe(
-        res => {
-          console.log(res);
-        }
-      );
-    setTimeout(function() {
-      alert('Email sent!');
-    }, 1000);
+    if (this.peopleArray.length > 0) {
+      const listOfPeople = this.peopleArray.join(', ');
+      this.mailService.send(listOfPeople).subscribe(res => { console.log('rsvp component send', res); });
+      setTimeout(function() {
+        alert('Email sent!');
+      }, 1000);
+    }
   }
 }

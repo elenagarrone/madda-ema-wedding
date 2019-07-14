@@ -51,6 +51,7 @@ p {
   min-width: 200px;
   text-align: center;
   @include fontsize(16);
+  cursor: pointer;
 
   &:hover {
     text-decoration: underline;
