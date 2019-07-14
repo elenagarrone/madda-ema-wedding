@@ -26,7 +26,6 @@ router.get('/', (req, res) => {
 router.post('/post', (req, res) => {
   req.setTimeout(0);
   data.text = req.body.body;
-  console.log('data', data);
 
   mailgun.messages().send(data, {'content-type': 'text/html'}, function (error, body) {
     res.send(body);

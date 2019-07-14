@@ -18,8 +18,8 @@
           <fa-icon icon="plus-circle" size="lg"></fa-icon>
           <span>Aggiungi un altro nome</span>
         </button>
-      <button *ngIf="!!peopleArray?.length && !showConfirmation" class="btn btn-secondary">Conferma RSVP</button>
-      <div *ngIf="showConfirmation" class="confirmation">Grazie per la conferma! A presto!</div>
+      <button *ngIf="!!peopleArray?.length" class="btn btn-secondary">Conferma RSVP</button>
+      <div *ngIf="showConfirmation && !peopleArray?.length" class="confirmation">Grazie per la conferma! A presto!</div>
     </div>
   </form>
 </div>

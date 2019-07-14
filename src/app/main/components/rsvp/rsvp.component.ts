@@ -57,6 +57,7 @@ export class RsvpComponent implements OnInit {
         console.log('sending RSVP', res);
       });
       this.showConfirmation = true;
+      this.rsvpForm.reset();
     }
   }
 }
