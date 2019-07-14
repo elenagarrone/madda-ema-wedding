@@ -4,6 +4,10 @@
   text-align: center;
   margin-top: component-space(8);
   margin-bottom: component-space(8);
+
+  .info fa-icon {
+    position: relative;
+  }
 }
 
 .title {

@@ -1,0 +1,25 @@
+<div class="rsvp js--fadeInBottom" id="rsvp-section">
+    <h2 class="title">Rsvp</h2>
+    <p>Per favore confermateci la vostra presenza al matrimonio il prima possibile, inserite i vostri nomi qui sotto!</p>
+
+  <form [formGroup]="rsvpForm" (ngSubmit)="submitForm()">
+    <div class="fields" formArrayName="people">
+      <div *ngFor="let item of people.controls; let nameIndex=index; last as isLast" [formGroupName]="nameIndex" class="form-field">
+        <div class="wrapper">
+          <label for="input-{{nameIndex}}" class="access">Nome</label>
+          <input id="input-{{nameIndex}}" placeholder="Nome e cognome" formControlName="name">
+          <button class="btn-i btn-close" type="button" (click)="deletePeople(nameIndex)">
+            <fa-icon icon="times-circle" size="lg"></fa-icon>
+            <span class="access">Elimina nome</span>
+          </button>
+        </div>
+      </div>
+        <button class="btn-i btn-add" type="button" (click)="addPeople()">
+          <fa-icon icon="plus-circle" size="lg"></fa-icon>
+          <span>Aggiungi un altro nome</span>
+        </button>
+      <button *ngIf="!!peopleArray?.length" class="btn btn-secondary">Conferma RSVP</button>
+      <div *ngIf="showConfirmation && !peopleArray?.length" class="confirmation">Grazie per la conferma! A presto!</div>
+    </div>
+  </form>
+</div>

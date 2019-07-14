@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
+import keyboardFocus from 'keyboard-focus';
 
 @Component({
   selector: 'app-root',
@@ -13,6 +13,7 @@ export class AppComponent {
   constructor(
     private http: HttpClient
   ) {
+    keyboardFocus(document);
     setInterval(function() {
       http.get('https://madda-ema-wedding.herokuapp.com');
     }, 300000); // every 5 minutes (300000)

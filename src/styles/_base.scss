@@ -50,6 +50,8 @@ p {
   display: inline-block;
   min-width: 200px;
   text-align: center;
+  @include fontsize(16);
+  cursor: pointer;
 
   &:hover {
     text-decoration: underline;
@@ -81,4 +83,12 @@ strong {
 
 main {
   overflow: hidden;
+}
+
+.access {
+  @include access;
+}
+
+:focus:not([keyboard-focus]) {
+  outline-width: 0;
 }
