@@ -1,5 +1,5 @@
 <div class="rsvp js--fadeInBottom" id="rsvp-section">
-    <h2 class="title">Rsvp</h2>
+    <h2 class="title">R.S.V.P.</h2>
     <p>Per favore confermateci la vostra presenza al matrimonio il prima possibile, inserite i vostri nomi qui sotto!</p>
 
   <form [formGroup]="rsvpForm" (ngSubmit)="submitForm()">
@@ -18,7 +18,7 @@
           <fa-icon icon="plus-circle" size="lg"></fa-icon>
           <span>Aggiungi un altro nome</span>
         </button>
-      <button *ngIf="!!peopleArray?.length" class="btn btn-secondary">Conferma RSVP</button>
+      <button *ngIf="!!peopleArray?.length" class="btn btn-secondary">Conferma R.S.V.P.</button>
       <div *ngIf="showConfirmation && !peopleArray?.length" class="confirmation">Grazie per la conferma! A presto!</div>
     </div>
   </form>
