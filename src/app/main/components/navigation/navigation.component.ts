@@ -41,11 +41,6 @@ export class NavigationComponent implements OnInit {
               pageScroll: false
             },
             {
-              text: 'Viaggio',
-              href: '#lista-viaggio-dettagli-section',
-              pageScroll: true
-            },
-            {
               text: 'Come partecipare',
               href: '#come-partecipare-section',
               pageScroll: true
