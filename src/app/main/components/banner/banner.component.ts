@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./banner.component.scss']
 })
 export class BannerComponent implements OnInit {
-  endtime: string = 'September 28 2019 16:00:0 GMT+0100'
+  endtime: string = 'September 28 2019 16:00:0 GMT+0200';
   timeLeft: any;
 
   constructor() { }
